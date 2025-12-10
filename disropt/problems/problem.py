@@ -157,7 +157,7 @@ class Problem:
         try:
             import cvxopt
         except ImportError:
-            ImportError("CVXOPT is required")
+            raise ImportError("CVXOPT is required")
 
         m = len(self.nonlinear_constraints)
         if x is None and z is None:
